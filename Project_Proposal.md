@@ -1,4 +1,4 @@
-Project Proposal: [Christmas Pong]
+#Project Proposal: [Christmas Pong]#
 
 Team Members: [Sam Paladino, Clark Keith]
 Client: [Tuckasucka Keith Paladino]
