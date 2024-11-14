@@ -1,6 +1,6 @@
-#Project Proposal: [Christmas Pong]#
+Project Proposal: [Christmas Pong]
 
-##Team Members: [Sam Paladino, Clark Keith]##
+Team Members: [Sam Paladino, Clark Keith]
 Client: [Tuckasucka Keith Paladino]
 Date: [11/14/24]
 
