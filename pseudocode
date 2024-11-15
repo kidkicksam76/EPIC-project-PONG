@@ -1,0 +1,51 @@
+BEGIN Game
+    INITIALIZE game window (set width and height)
+    SET background to snowy winter scene with falling snowflakes
+    SET Christmas-themed sound effects (e.g., jingle bells)
+    SET up player paddles (Player 1 on left, Player 2 on right)
+    SET paddle dimensions (Width: 15px, Height: 100px)
+    SET paddle color to red for Player 1, green for Player 2
+    SET initial ball properties (Size: 20px, Shape: Gift box, Color: Red and Green stripes)
+    SET ball speed and direction randomly
+    SET score for Player 1 and Player 2 to 0
+    DISPLAY the score in a festive font (e.g., "Merry Christmas" style)
+
+    WHILE game is running:
+        CHECK for user input:
+            - If Player 1 presses up arrow, move paddle up
+            - If Player 1 presses down arrow, move paddle down
+            - If Player 2 presses 'W', move paddle up
+            - If Player 2 presses 'S', move paddle down
+
+        UPDATE positions of paddles:
+            - Ensure paddles stay within the game window (not out of bounds)
+
+        MOVE the gift box ball:
+            - Check if the ball hits the top or bottom of the screen:
+                - Reverse the vertical direction (bounce)
+            - Check if the ball hits Player 1's paddle:
+                - Reverse the horizontal direction and add a little random spin for fun
+            - Check if the ball hits Player 2's paddle:
+                - Reverse the horizontal direction and add a little random spin for fun
+            - Check if the ball goes past Player 1 or Player 2:
+                - If the ball passes Player 1, increment Player 2's score
+                - If the ball passes Player 2, increment Player 1's score
+                - Reset ball to the center, with a random starting direction
+
+        PLAY Christmas sound effects based on events:
+            - Ball bounce sound (jingle bell sound)
+            - Goal scored sound (cheerful chime)
+
+        UPDATE score display:
+            - Display current score (Player 1 vs. Player 2)
+
+        CHECK if either player reaches the winning score (e.g., 10 points):
+            - If Player 1 wins, display "Merry Christmas Player 1 Wins!"
+            - If Player 2 wins, display "Merry Christmas Player 2 Wins!"
+            - Play celebratory sound (e.g., "Deck the Halls" or a fanfare)
+            - END game
+
+        WAIT for a short period to control game speed (frame rate)
+
+    END game loop
+END Game
