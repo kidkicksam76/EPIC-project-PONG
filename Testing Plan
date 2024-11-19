@@ -1,0 +1,101 @@
+Part 1: Unit Testing the Game Mechanics
+Description:
+Unit tests ensure that the core mechanics of the game (such as movement, collision detection, and score calculation) work as expected in isolation.
+
+Action:
+Movement: Ensure the paddle moves as expected with user input.
+Collision Detection: Ensure the ball bounces off walls and paddles correctly.
+Ball Reset: Ensure the ball resets to the center after scoring a point.
+Unit Test Cases:
+Test Case	Test Data	Expected Outcome
+Paddle Movement (Player 1)	Player presses UP, DOWN keys	Paddle moves up/down within the screen boundaries
+Paddle Movement (Player 2)	Player 2 presses UP, DOWN keys	Paddle moves up/down within the screen boundaries
+Ball Bouncing Off Paddle	Ball hits paddle while moving towards it	Ball should bounce back in the opposite direction with appropriate speed
+Ball Bouncing Off Top/Bottom	Ball hits top or bottom wall	Ball should reverse its Y direction
+Ball Reset After Scoring	Ball passes a paddle	Ball should reset to center of the screen with a visual effect (snowfall, Christmas sound)
+Christmas Ornament Ball	Ball collision with paddle	The ball should remain in the Christmas ornament form, bouncing properly
+Part 2: Logic Testing the Game Rules and Calculations
+Description:
+Logic tests ensure that the game rules and score calculations work as expected and produce the correct results.
+
+Action:
+Score Calculation: Ensure the score is updated correctly after each point is scored.
+Speed Increase: Ensure the game speed increases correctly with the player's score or level.
+Bonus Points for Power-Ups: Ensure power-ups work correctly and apply score multipliers or other bonuses.
+Logic Test Cases:
+Test Case	Test Data	Expected Outcome
+Score Calculation	Player scores a point	Score should increase by 1 for each point scored
+Level Progression	Player reaches 10 points	Speed should increase by 15% after 10 points
+Power-Up Bonus	Player collects a power-up	Score multiplier should apply, e.g., double points for 10 seconds
+Max Score	Score reaches 9999	Score remains at 9999 and is decorated with a gold frame
+Bonus Points for Clearing 4 Lines	Player clears 4 lines (Tetris event)	Score should increase by 800 points and a special animation should trigger
+Part 3: Boundary Testing: Edge Cases and Limits
+Description:
+Boundary testing ensures that the game handles extreme or rare cases (like maximum score, multiple lines cleared, maximum speed, etc.).
+
+Action:
+Maximum Score: Test if the game can handle the maximum score correctly.
+Clearing Multiple Lines: Test if the game handles clearing multiple lines correctly.
+Edge Collisions: Ensure the game stops movement correctly when pieces touch the boundary.
+Boundary Test Cases:
+Test Case	Test Data	Expected Outcome
+Max Score	Score reaches 9999	Score should remain at 9999 with a gold frame around it
+Clearing Multiple Lines	Player clears 4 lines	Score should increase by 800 and trigger special Tetris effects
+Ball at Boundary	Ball moves to the far left/right	Ball should stop at the edge and reverse direction
+Paddle at Boundary	Paddle at top or bottom	Paddle should not move beyond the top or bottom of the screen
+High Speed	Player reaches level 10	Speed should be constant at level 10 and no issues with game performance
+Part 4: Integration Testing: System Interaction
+Description:
+Integration testing ensures that all components of the game (UI, mechanics, scoring, etc.) work together correctly.
+
+Action:
+Gameplay and Scoring: Verify that the game updates the score after clearing lines or scoring points.
+Movement and Collision: Verify that player movement interacts with obstacles, boundaries, and paddles.
+Menus and Gameplay: Ensure the game starts properly from the menu and resets correctly after the game ends.
+Integration Test Cases:
+Test Case	Test Data	Expected Outcome
+Gameplay and Scoring	Player clears a line	Score should update and the line should disappear from the grid
+Movement and Collision	Player moves paddle and hits ball	Ball should bounce correctly off the paddle
+Menus and Gameplay	Player clicks “Start Game”	Game should transition to the gameplay screen with Christmas effects
+Reset After Game Over	Player loses the game	Game should reset, display the "Game Over" screen, and offer a restart option
+Power-Up and Gameplay Integration	Player collects power-up	The power-up effect should apply immediately, and gameplay should continue without disruption
+Part 5: Handling Bad Input and Run-Time Errors
+Description:
+This testing ensures that the game handles invalid input and runtime errors gracefully.
+
+Action:
+Invalid Key Input: Ensure the game ignores or handles invalid key presses correctly.
+Unexpected Game States: Test how the game reacts to unexpected conditions (e.g., the grid is unexpectedly empty).
+Error Handling: Test how the game responds to errors, such as corrupted save files.
+Bad Input Test Cases:
+Test Case	Test Data	Expected Outcome
+Invalid Key Input	Player presses a non-mapped key	Game should ignore the input and not crash
+Multiple Key Presses	Player presses multiple conflicting keys	Game should process only one valid input and ignore conflicting inputs
+Corrupted Save File	Corrupt save data	Game should notify the player and allow them to start a new game
+Server Loss (for online play)	Server connection is lost	Game should notify the player and return to the main menu
+Unexpected State	Empty grid after level completion	Game should reset or show an error and continue normally
+Test Case Table
+Here’s a consolidated table with all the test cases, test data, and expected outcomes.
+
+Test Case	Test Data	Expected Outcome
+Paddle Movement (Player 1)	UP, DOWN keys	Paddle moves correctly
+Ball Bouncing Off Paddle	Ball hits paddle	Ball bounces back
+Ball Bouncing Off Top/Bottom	Ball hits wall	Ball reverses direction
+Ball Reset After Scoring	Ball passes paddle	Ball resets to center
+Score Calculation	Player scores a point	Score increases by 1
+Level Progression	Player reaches 10 points	Speed increases by 15%
+Power-Up Bonus	Player collects power-up	Score multiplier applies
+Max Score	Score reaches 9999	Score remains at 9999
+Clearing Multiple Lines	Player clears 4 lines	Score increases by 800
+Ball at Boundary	Ball moves to the far left/right	Ball stops and reverses
+Paddle at Boundary	Paddle at top or bottom	Paddle stops at boundary
+Gameplay and Scoring	Player clears a line	Score updates, line disappears
+Movement and Collision	Player moves paddle and hits ball	Ball bounces off paddle correctly
+Menus and Gameplay	Player clicks “Start Game”	Game starts with effects
+Reset After Game Over	Player loses the game	Game resets and shows "Game Over"
+Power-Up and Gameplay Integration	Player collects power-up	Power-up effect applied immediately
+Invalid Key Input	Player presses invalid key	Game ignores invalid key
+Multiple Key Presses	Player presses conflicting keys	Game ignores conflicting input
+Corrupted Save File	Corrupt save data	Game notifies player and allows restart
+Server Loss	Server connection lost	Game returns to main menu
+Unexpected State	Empty grid	Game resets or shows error
