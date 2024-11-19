@@ -1,3 +1,0 @@
-Clark Keith
-
-Sam Paladino
