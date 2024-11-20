@@ -1,0 +1,74 @@
+Requirements Specification: Christmas Pong
+
+Game Name: Christmas Pong
+Team Members: Clark Keith, Sam Palladino
+Client: Mrs Kennedy 
+Date: November 20, 2024
+
+Game Overview
+Brief Description:
+Christmas Pong is a festive twist on the classic Pong game, where players control paddles decorated with Christmas-themed designs (like snowflakes and ornaments) and try to bounce a snowball back and forth. The game features power-ups such as "Frostbite," where the ball speeds up or slows down, and "Snowstorm," where the paddles temporarily shrink or enlarge.
+
+Genre: Arcade, Sports, Party
+
+Objective:
+The main goal is to score points by bouncing the snowball past the opponent’s paddle. Players must react quickly to return the snowball and prevent it from passing their paddle. The first player to reach a set number of points wins.
+
+Functional Requirements
+Core Features:
+Multiplayer Mode:
+The game will allow two players to play either locally (on the same device) or online.
+Power-Ups:
+Include power-ups like "Frostbite" (affects ball speed) and "Snowstorm" (affects paddle size).
+Score Tracking:
+The game must track the score for each player and display it on the screen.
+Game Over Screen:
+When a player reaches the target score, a celebratory Christmas screen should appear with festive graphics.
+Settings Menu:
+Players can adjust game speed, toggle music, or reset the game.
+User Interactions:
+Paddle Movement:
+Players control the paddles using keyboard keys or touch controls. For PC, one player uses the arrow keys and the other uses "W" and "S" to move up and down. On mobile, players will swipe to move their paddles.
+Ball Interaction:
+Players bounce the snowball by moving their paddles to hit it, aiming to score by sending the ball past the opponent’s paddle.
+Power-Up Activation:
+Power-ups will automatically activate when a player hits a power-up icon with their paddle. These effects last for a short period.
+Non-Functional Requirements
+Usability:
+The game should be easy to pick up and play. A brief tutorial should guide players on controls and objectives, especially for first-time users. The interface should be clear with minimal clutter, showcasing the score, paddles, and ball prominently.
+
+Performance:
+The game should maintain a constant frame rate of 60 FPS to ensure smooth gameplay. Load times between menus and game rounds should be under 3 seconds. The game must support smooth transitions between screens (e.g., from menu to gameplay and back).
+
+Cross-Platform Compatibility:
+Christmas Pong should be playable on PC (Windows, Mac) and mobile platforms (iOS, Android). The gameplay should scale well to different screen sizes and resolutions, and the controls should be responsive across both desktop and mobile platforms.
+
+Design Requirements
+Graphics and Visuals:
+
+The game will feature a festive holiday theme, with paddles designed as Christmas ornaments, snowflakes, or wrapped presents. The background will be a snowy landscape with twinkling lights and a wintery atmosphere.
+The ball will be designed as a snowball that can change color when a power-up is activated.
+Smooth animations for the ball bouncing and power-ups appearing.
+Audio:
+
+Background music will consist of cheerful Christmas tunes like "Jingle Bells" and "Deck the Halls."
+Sound effects will include the “whoosh” of the ball bouncing, the sound of the snowball hitting the paddle, and festive jingles when power-ups are activated.
+A celebratory sound will play when a player wins a round.
+Data Requirements
+Data to be Saved/Tracked:
+Player scores, round wins, and game settings (like sound preferences).
+High scores for players to aim for and compare with friends.
+Data Storage:
+Local Storage: Store scores and settings locally on the device, allowing players to resume play even after closing the game.
+Online Storage: Optional cloud storage to sync high scores and player preferences across devices.
+Collaboration with Client
+Feedback Gathering:
+Weekly feedback sessions with Professor Martin to showcase progress and gather input. These sessions will focus on game mechanics, aesthetics, and balance of difficulty.
+Playtesting with feedback surveys to ensure the game’s controls, visuals, and audio match the client’s vision for a fun and engaging experience.
+Ensuring Client’s Needs:
+During each sprint, specific milestones will be reviewed to ensure the client’s preferences, especially regarding visual style, ease of play, and the Christmas theme, are being met.
+Any adjustments needed based on client feedback (e.g., game speed or difficulty tweaks) will be implemented and tested in subsequent iterations.
+This specification outlines the essential components for developing Christmas Pong, ensuring it combines classic Pong gameplay with a fun, festive theme and interactive mechanics that will engage both casual and competitive players.
+
+
+
